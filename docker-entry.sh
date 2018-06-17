@@ -13,4 +13,4 @@ cp /config.template.json /mattermost/config/config.json
 
 echo "Starting platform"
 cd /mattermost/bin
-./platform $*
+./mattermost server $*

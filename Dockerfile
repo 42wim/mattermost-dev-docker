@@ -3,7 +3,7 @@ FROM mysql:5
 RUN apt-get update && apt-get -y install curl netcat
 RUN mkdir -p /mattermost/data
 
-RUN curl https://releases.mattermost.com/5.12.0/mattermost-team-5.12.0-linux-amd64.tar.gz | tar -xvz
+RUN curl https://releases.mattermost.com/5.13.0/mattermost-team-5.13.0-linux-amd64.tar.gz | tar -xvz
 
 COPY config.template.json /
 COPY docker-entry.sh /

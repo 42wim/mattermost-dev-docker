@@ -1,9 +1,9 @@
-FROM mysql:5
+FROM mysql:8
 
 RUN apt-get update && apt-get -y install curl netcat
 RUN mkdir -p /mattermost/data
 
-RUN curl https://releases.mattermost.com/5.18.1/mattermost-team-5.18.1-linux-amd64.tar.gz | tar -xvz
+RUN curl https://releases.mattermost.com/6.0.2/mattermost-team-6.0.2-linux-amd64.tar.gz | tar -xvz
 
 COPY config.template.json /
 COPY docker-entry.sh /
